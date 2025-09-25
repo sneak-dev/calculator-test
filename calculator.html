@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./calculator.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div>
+        <div class="calculator-container">
+            <div class="display">
+                <input type="text" id="calculate_process" class="calculate_process" readonly>
+            </div>
+            <div class="result-display">
+                <input type="text" id="result" class="result" readonly value="0">
+            </div>
+        <div>
+            <table>
+                <tr>
+                    <td><button id="one" class="one" onclick="calculation(this.value)" value="1">1</button></td>
+                    <td><button id="two" class="two" onclick="calculation(this.value)" value="2">2</button></td>
+                    <td><button id="three" class="three" onclick="calculation(this.value)" value="3">3</button></td>
+                    <td><button id="divide" class="divide" onclick="calculation(this.value)" value="/">/</button></td>
+                </tr>
+                <tr>
+                    <td><button id="four" class="four" onclick="calculation(this.value)" value="4">4</button></td>
+                    <td><button id="five" class="five" onclick="calculation(this.value)" value="5">5</button></td>
+                    <td><button id="six" class="six" onclick="calculation(this.value)" value="6">6</button></td>
+                    <td><button id="multilator" class="multilator" onclick="calculation(this.value)" value="*">×</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button id="seven" class="seven" onclick="calculation(this.value)" value="7">7</button></td>
+                    <td><button id="eight" class="eight" onclick="calculation(this.value)" value="8">8</button></td>
+                    <td><button id="night" class="night" onclick="calculation(this.value)" value="9">9</button></td>
+                    <td><button id="minus" class="minus" onclick="calculation(this.value)" value="-">-</button></td>
+                </tr>
+                <tr>
+                    <td><button id="zero" class="zero" onclick="calculation(this.value)" value="0">0</button></td>
+                    <td><button id="dot" class="dot" onclick="calculation(this.value)" value=".">.</button></td>
+                    <td><button id="plus" class="plus" onclick="calculation(this.value)" value="+">+</button></td>
+                    <td><button id="equal" class="equal" onclick="calculation(this.value)" value="=">=</button></td>
+                </tr>
+            </table>
+            <table class="control" id="control">
+                <tr class="control_btn" id="control_btn">
+                    <td><button id="format" class="format" onclick="clearAll()">CE</button></td>
+                    <td><button id="delete" class="delete" onclick="backspace()">⌫</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./calculator.js"></script>
+</body>
+
+</html>
