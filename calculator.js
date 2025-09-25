@@ -10,23 +10,53 @@ function calculation(inputValue) {
     if (inputValue === '=') {
         if (currentInput && operator && previousInput) {
                 const calculation = previousInput + operator + currentInput;
-                const answer = eval(calculation);
-                result.value = answer;
-                display.value = calculation + ' = ' + answer;
-                currentInput = answer.toString();
-                previousInput = '';
-                operator = '';
-                shouldResetDisplay = true;
+                try {
+                    if (operator === '/' && Number(currentInput) === 0) {
+                        throw new Error('Division by zero');
+                    }
+                    const answer = eval(calculation);
+                    if (typeof answer !== 'number' || !isFinite(answer)) {
+                        throw new Error('Invalid calculation');
+                    }
+                    result.value = answer;
+                    display.value = calculation + ' = ' + answer;
+                    currentInput = answer.toString();
+                    previousInput = '';
+                    operator = '';
+                    shouldResetDisplay = true;
+                } catch (e) {
+                    result.value = 'Error';
+                    display.value = calculation + ' = Error';
+                    currentInput = '';
+                    previousInput = '';
+                    operator = '';
+                    shouldResetDisplay = true;
+                }
         }
     } else if (inputValue==="+"||inputValue==="-"||inputValue==="*"||inputValue==="/") {
         if (currentInput && operator && previousInput) {
                 const calculation = previousInput + operator + currentInput;
-                const answer = eval(calculation);
-                previousInput = answer.toString();
-                operator = inputValue;
-                currentInput = '';
-                display.value = previousInput + operator;
-                result.value = previousInput;
+                try {
+                    if (operator === '/' && Number(currentInput) === 0) {
+                        throw new Error('Division by zero');
+                    }
+                    const answer = eval(calculation);
+                    if (typeof answer !== 'number' || !isFinite(answer)) {
+                        throw new Error('Invalid calculation');
+                    }
+                    previousInput = answer.toString();
+                    operator = inputValue;
+                    currentInput = '';
+                    display.value = previousInput + operator;
+                    result.value = previousInput;
+                } catch (e) {
+                    result.value = 'Error';
+                    display.value = calculation + ' = Error';
+                    currentInput = '';
+                    previousInput = '';
+                    operator = '';
+                    shouldResetDisplay = true;
+                }
         } else if (currentInput) {
             previousInput = currentInput;
             operator = inputValue;
