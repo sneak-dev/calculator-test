@@ -31,9 +31,9 @@ calculator/
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic structure and accessibility
-- **CSS3**: Modern styling with flexbox, transitions, and responsive design
-- **Vanilla JavaScript**: Pure JavaScript without external dependencies
-- **Responsive Design**: Mobile-first approach with flexible layouts
+- **CSS3**: Modern styling with flexbox, transitions, and responsive design.
+- **Vanilla JavaScript**: Pure JavaScript without external dependencies.
+- **Responsive Design**: Mobile-first approach with flexible layouts.
 
 ## 🎯 How It Works
 
