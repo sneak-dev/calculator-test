@@ -1,6 +1,6 @@
 # 🧮 Calculator Web Application
 
-A modern, responsive calculator built with vanilla HTML, CSS, and JavaScript. This calculator provides a clean and intuitive interface for performing basic mathematical operations.
+A modern, responsive calculator built with vanilla HTML, CSS, and JavaScript. This calculator provides a clean and intuitive interface for performing basic mathematical operations....
 
 ## ✨ Features
 
